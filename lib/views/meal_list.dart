@@ -73,40 +73,46 @@ class MealList extends StatelessWidget {
               color: Colors.grey[350],
               padding: EdgeInsets.symmetric(vertical: 6),
               child: GridView.builder(
+
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 8,
+                      crossAxisSpacing: 6,
+                      childAspectRatio: 3 / 3.28
+                  ),
+
                   physics: BouncingScrollPhysics(),
                   itemCount: data.length,
-                  gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 0.8,
-                    crossAxisSpacing: 5,
-                    childAspectRatio: devicewidth / (deviceheight / 1.76),
-                  ),
-                  itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: () => Get.to(() => MealDetailPage(data[index]), transition: Transition.leftToRight),
-                      child: Card(
-                        color: Colors.grey[350],
+                  itemBuilder: (context, index){
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(() => MealDetailPage(data[index]), transition: Transition.leftToRight);
+                        },
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Expanded(
-                              child: CachedNetworkImage(
-                                imageUrl: data[index].image, fit: BoxFit.fill,
-                                placeholder: (context, url) => Center(child: LoadingUI()),
-                              ),
-                            ),
+                            Container(
+                                height: deviceheight * 0.2,
+                                child: Card(
+                                  elevation: 4,
+                                    color: Colors.grey[350],
+                                    child: CachedNetworkImage(
+                                      fit: BoxFit.fitWidth,
+                                      imageUrl:data[index].image,
+                                      placeholder: (context, url) => Center(child: LoadingUI()),
+                                    ))),
                             Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4),
-                              child: Text(
-                                data[index].name,
-                                overflow: TextOverflow.ellipsis,
-                              ),
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: Text(data[index].name, overflow: TextOverflow.ellipsis,),
                             ),
+
                           ],
                         ),
                       ),
                     );
-                  }),
+                  }
+              ),
             );
           },
           error: (err, stack) => (err as String).contains('No Internet.') ? ConnectionUI(() {ref.refresh(mealsCategoryProvider(mealsCategory.name ));}) : Center(child: Text(err.toString())),
