@@ -77,7 +77,7 @@ class MealList extends StatelessWidget {
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisSpacing: 8,
-                      crossAxisSpacing: 6,
+                      crossAxisSpacing: 2,
                       childAspectRatio: 3 / 3.28
                   ),
 
@@ -95,7 +95,7 @@ class MealList extends StatelessWidget {
                             Container(
                                 height: deviceheight * 0.2,
                                 child: Card(
-                                  elevation: 4,
+                                  elevation: 3,
                                     color: Colors.grey[350],
                                     child: CachedNetworkImage(
                                       fit: BoxFit.fitWidth,

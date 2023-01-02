@@ -10,7 +10,6 @@ import 'package:meal/models/meal_category.dart';
 import 'package:meal/models/meals.dart';
 import 'package:meal/providers/meals_provider.dart';
 import 'package:meal/views/video_page.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class MealDetailPage extends StatelessWidget {
   MealsCategory mealsCategory;

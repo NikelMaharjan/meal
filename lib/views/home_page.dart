@@ -15,9 +15,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SafeArea(
-          child: Consumer(
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 1,
+          backgroundColor: Colors.grey[300],
+          title: Text("Categories", style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black),),
+        ),
+          body: Consumer(
               builder: (context, ref, child) {
                 final allCategory = ref.watch(mealsAllCategoryProvider);
                 final randomMeal = ref.watch(randomMealProvider);
@@ -63,12 +68,12 @@ class HomePage extends StatelessWidget {
                     //
                     //
                     // ),
-                    Container(
-                        height: deviceheight *0.06,
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text("Categories", style: TextStyle(fontSize: 24),),
-                        )),
+                    // Container(
+                    //     height: deviceheight *0.06,
+                    //     child: Padding(
+                    //       padding: const EdgeInsets.only(top: 8.0),
+                    //       child: Text("Categories", style: TextStyle(fontSize: 24),),
+                    //     )),
 
                     allCategory.when(
                         data: (data){
@@ -128,8 +133,8 @@ class HomePage extends StatelessWidget {
                 );
 
               }
-          ),
-        )
+          )
+      ),
     );
   }
 }

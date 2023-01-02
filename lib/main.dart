@@ -12,7 +12,9 @@ import 'constants.dart';
 void main (){
   runApp(MaterialApp(debugShowCheckedModeBanner:false, home: ProviderScope(child: MyApp())));
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.grey[300]
+      statusBarColor: Colors.grey[300],
+      statusBarBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark
   ));
 }
 
