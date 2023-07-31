@@ -40,6 +40,8 @@ class MealProvider extends StateNotifier<MealState> {
           isLoad: false,
           mealCategory: response,
           errMsg: ''
+
+
       );
     }
 
