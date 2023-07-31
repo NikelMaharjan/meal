@@ -42,6 +42,10 @@ class MealProvider extends StateNotifier<MealState> {
           errMsg: ''
 
 
+
+
+
+
       );
     }
 
