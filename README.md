@@ -1,16 +1,6 @@
 # meal
 
-A new Flutter project.
+video of app
 
-## Getting Started
+![meal](https://github.com/NikelMaharjan/HackerNews/assets/22465905/733d1141-56c6-4f9f-8a77-9f98ee98e9f9)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
