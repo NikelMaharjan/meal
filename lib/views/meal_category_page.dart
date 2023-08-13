@@ -35,10 +35,6 @@ class MealCategoryPage extends StatelessWidget {
           ),
           body: Consumer(
               builder: (context, ref, child) {
-
-
-
-                
                 
                 final data = ref.watch(mealCategoryProvider);
 
@@ -71,7 +67,6 @@ class MealCategoryPage extends StatelessWidget {
                             child: Column(
                               children: [
                                 Container(
-
                                     height: 154.h,
                                     child: Card(
                                         elevation: 2,

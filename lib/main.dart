@@ -38,6 +38,8 @@ class MyApp extends StatelessWidget {
                 textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
             ),
             home: MealCategoryPage()
+
+
         );
       },
     );
