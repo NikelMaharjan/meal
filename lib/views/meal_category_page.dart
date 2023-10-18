@@ -46,7 +46,7 @@ class MealCategoryPage extends StatelessWidget {
 
                 else if (data.errMsg.isEmpty){
                   return GridView.builder(
-                    
+
 
                       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
